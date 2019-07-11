@@ -1,0 +1,11 @@
+<h1><%= link_to 'Anazon', '/' %></h1>
+
+<%=form_tag '/mitsurins/search', method: :post do%>
+  <%= label_tag 'キーワード' %>
+  <%= text_field_tag :keyword %>
+  <%= submit_tag '検索' %>
+<% end %>
+
+<% @mitsurins.each do |mr| %>
+  <p><%=link_to mr.name, "mitsurins/#{mr.id}" %></p>
+<% end %>

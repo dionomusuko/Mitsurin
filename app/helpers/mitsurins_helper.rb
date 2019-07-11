@@ -1,0 +1,2 @@
+module MitsurinsHelper
+end

@@ -1,0 +1,2 @@
+class MitsurinController < ApplicationController
+end
