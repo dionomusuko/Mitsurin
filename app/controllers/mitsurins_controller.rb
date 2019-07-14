@@ -6,7 +6,7 @@ class MitsurinsController < ApplicationController
     @mitsurin = List.find(params[:id])
   end
   def search
-    @mitsurins = List.where(name: params[:keyword])
+    @mitsurins = List.where(name: params[:keyword]).or(List.where(janru: params[:keyword]))
     render "index"
   end
   def destroy
