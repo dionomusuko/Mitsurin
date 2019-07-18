@@ -1,0 +1,13 @@
+<%= form_for @mitsurin , url: {action: :create} do |f| %>
+  <p><%= f.label :name, '名前'%>
+    <%= f.text_field :name %></p>
+  <p><%= f.label :janru, 'ジャンル' %>
+  <%= f.text_field :janru %></p>
+  <p><%= f.label :coment, '説明' %>
+  <%= f.text_field :coment, :size=>"60*300" %></p>
+  <p><%= f.label :icon, '画像'%>
+  <%= f.file_field :icon%></p>
+  <p><%= f.label :price, '値段' %>
+    <%= f.text_field :price%>円</p>
+  <p><%= f.submit '登録' %></p>
+<% end %>

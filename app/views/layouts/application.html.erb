@@ -9,16 +9,18 @@
   </head>
 
   <body>
-    <div id = 'container'>
       <header>
         <%= render "shared/header" %>
+
       </header>
+      <div class="container">
+        <aside id= "sidebar">
+          <%= render "shared/sidebar" %>
+        </aside>
       <main>
         <%= yield %>
       </main>
-      <aside id= "sidebar">
-             <%= render "shared/sidebar" %>
-      </aside>
+
       <footer>
         <%= render "shared/footer" %>
       </footer>

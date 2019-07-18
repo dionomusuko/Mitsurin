@@ -1,6 +1,7 @@
-<h2>ニュース</h2>
-  <ul>
-    <% 5.times do |i| %>
-    <li>  <%= link_to "ニュースの見出し", "#" %></li>
-    <% end %>
-  </ul>
+
+
+<%=form_tag 'mitsurins/search', method: :post do%>
+  <%= label_tag 'キーワード' %>
+  <%= text_field_tag :keyword %>
+  <%= submit_tag '検索' %>
+<% end %>
