@@ -4,4 +4,4 @@
   <p><%= @mitsurin.price %>円</p>
 </strong>
 
-<%= button_to '購入' %>
+<%= button_to '購入', "#", data: {confirm: "本当に購入しますか？"} %>

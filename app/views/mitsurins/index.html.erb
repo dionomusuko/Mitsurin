@@ -1,10 +1,15 @@
 
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
 <% @mitsurins.each do |mr| %>
   <p>
     <%= image_tag  "/get_image/#{mr.id}" %>
     <strong><%=link_to mr.name, "/mitsurins/#{mr.id}" %></strong>
     <div class="menu">
-      <%= link_to '削除', "/mitsurins/#{mr.id}", method: :delete %>
+      <%= link_to '削除', "/mitsurins/#{mr.id}", method: :delete, data: {confirm: "本当に削除しますか？"}   %>
+      <%= link_to '編集', "/mitsurins/#{mr.id}/edit" %>
       <%= mr.price %>円
       <%= link_to '購入', "/mitsurins/#{mr.id}/purchase" %>
   </p></div>
