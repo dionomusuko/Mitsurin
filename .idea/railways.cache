@@ -1,7 +1,6 @@
                    Prefix Verb   URI Pattern                                                                              Controller#Action
                      root GET    /                                                                                        mitsurins#index
           mitsurins_about GET    /mitsurins/about(.:format)                                                               mitsurins#about
-                          GET    /mitsurins/:id/purchase(.:format)                                                        mitsurins#purchase
                 mitsurins GET    /mitsurins(.:format)                                                                     mitsurins#index
                           POST   /mitsurins(.:format)                                                                     mitsurins#create
              new_mitsurin GET    /mitsurins/new(.:format)                                                                 mitsurins#new
@@ -10,6 +9,7 @@
                           PATCH  /mitsurins/:id(.:format)                                                                 mitsurins#update
                           PUT    /mitsurins/:id(.:format)                                                                 mitsurins#update
                           DELETE /mitsurins/:id(.:format)                                                                 mitsurins#destroy
+                          GET    /mitsurins/:id/purchase(.:format)                                                        mitsurins#purchase
          mitsurins_search POST   /mitsurins/search(.:format)                                                              mitsurins#search
                           GET    /get_image/:id(.:format)                                                                 mitsurins#get_image
        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
