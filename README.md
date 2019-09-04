@@ -21,7 +21,7 @@ lists
 * price:integer
 
 ### 機能
- * CRAD機能
+ * CRUD機能
  * 商品購入機能
  * 商品検索機能
  * バリデーション機能 
